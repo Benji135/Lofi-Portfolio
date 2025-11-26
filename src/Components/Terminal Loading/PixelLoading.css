@@ -1,0 +1,331 @@
+/* PIXEL LOFI NIGHT THEME */
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+/* Container */
+.pixel-container {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, #0B0F1A, #0E1422);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Silkscreen', 'Press Start 2P', monospace;
+  overflow: hidden;
+  image-rendering: pixelated;
+  position: fixed;
+  inset: 0;
+}
+
+/* Background Image */
+.pixel-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80');
+  /* background-image: url('/images/bg2.jpg'); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.15; /* Subtle overlay */
+  filter: brightness(0.4) contrast(1.2) saturate(0.8);
+  z-index: 0;
+}
+
+/* Terminal Window */
+.pixel-terminal {
+  width: min(680px, 92vw);
+  height: min(500px, 82vh);
+  background: #0E1422;
+  border: 4px solid #142032;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  box-shadow:
+    0 0 0 2px #0A0E18,
+    inset 0 0 0 2px #0A0E18,
+    0 0 25px rgba(77,160,255,0.08);
+  position: relative;
+  transform-origin: center;
+  z-index: 1; /* Above background */
+  background: rgba(14, 20, 34, 0.95); /* Slightly transparent */
+  backdrop-filter: blur(2px); /* Subtle blur effect */
+}
+
+/* Pixel Grid */
+.pixel-terminal::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(20,32,50,0.25) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(20,32,50,0.25) 1px, transparent 1px);
+  background-size: 4px 4px;
+  opacity: 0.28;
+  pointer-events: none;
+}
+
+/* HEADER */
+.pixel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #142032;
+}
+
+.pixel-title {
+  color: #8FD4FF;
+  font-size: 20px;
+  text-shadow: 2px 2px 0 #070A12;
+}
+
+.pixel-status {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #4DA0FF;
+  font-size: 12px;
+}
+
+/* LED */
+.pixel-led {
+  width: 10px;
+  height: 10px;
+  background: #FF8CCF;
+  border: 1px solid #070A12;
+}
+
+.pixel-led.active {
+  background: #8FD4FF;
+  box-shadow: 0 0 6px #8FD4FF;
+}
+
+/* TERMINAL TEXT */
+.pixel-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #8FD4FF;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.pixel-line {
+  color: #8FD4FF;
+}
+
+.pixel-line.typing {
+  color: #B8E4FF;
+}
+
+.pixel-line.complete {
+  color: #44FF99;
+  animation: completeGlow 2s ease-in-out infinite;
+}
+
+@keyframes completeGlow {
+  0%, 100% { text-shadow: 0 0 3px rgba(68,255,153,0.3); }
+  50% { text-shadow: 0 0 8px rgba(68,255,153,0.5); }
+}
+
+/* PROMPTS */
+.pixel-prompt {
+  color: #4DA0FF;
+  margin-right: 8px;
+  font-size: 15px;
+}
+
+.pixel-prompt.success {
+  color: #44FF99;
+}
+
+/* Cursor */
+.pixel-cursor {
+  display: inline-block;
+  animation: blink 0.6s steps(2) infinite;
+  color: #FF8CCF;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* PROGRESS BAR */
+.pixel-progress {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.pixel-bar {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  gap: 3px;
+  height: 18px;
+  background: #0A0E18;
+  border: 2px solid #142032;
+  padding: 3px;
+}
+
+.pixel-block {
+  height: 100%;
+  background: #0A0E18;
+  border: 1px solid #142032;
+  transition: 0.1s ease;
+}
+
+.pixel-block.filled {
+  background: linear-gradient(45deg, #4DA0FF, #8FD4FF);
+  border-color: #B8E4FF;
+  box-shadow: 0 0 3px rgba(143, 212, 255, 0.6);
+}
+
+/* Percentage */
+.pixel-percent {
+  color: #8FD4FF;
+  font-size: 14px;
+  text-shadow: 1px 1px 0 #070A12;
+}
+
+/* FOOTER */
+.pixel-footer {
+  padding-top: 12px;
+  border-top: 2px solid #142032;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  color: #4DA0FF;
+  font-size: 12px;
+}
+
+/* Skip Button */
+.pixel-skip-btn {
+  background: #0A0E18;
+  border: 2px solid #142032;
+  padding: 6px 10px;
+  box-shadow: 2px 2px 0 #070A12;
+  color: #8FD4FF;
+  font-size: 12px;
+  font-family: 'Press Start 2P', monospace;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  image-rendering: pixelated;
+  flex-shrink: 0;
+}
+
+/* Ready state */
+.pixel-skip-btn.ready {
+  background: #0A0E18;
+  border-color: #4DA0FF;
+  color: #B8E4FF;
+  animation: readyPulse 2s ease-in-out infinite;
+}
+
+.pixel-skip-btn.ready:hover {
+  background: #142032;
+  border-color: #8FD4FF;
+  color: #FFFFFF;
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0 #070A12;
+  animation: none;
+}
+
+.pixel-skip-btn.ready:active {
+  background: #4DA0FF;
+  color: #0A0E18;
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0 #070A12;
+}
+
+.pixel-skip-btn.ready:focus {
+  outline: 2px solid #8FD4FF;
+  outline-offset: 2px;
+}
+
+/* Disabled state */
+.pixel-skip-btn.disabled {
+  background: #0A0E18;
+  border-color: #142032;
+  color: #4A6B8F;
+  cursor: not-allowed;
+  opacity: 0.6;
+  box-shadow: 2px 2px 0 #070A12;
+}
+
+.pixel-skip-btn.disabled:hover {
+  transform: none;
+  box-shadow: 2px 2px 0 #070A12;
+}
+
+@keyframes readyPulse {
+  0%, 100% { 
+    border-color: #4DA0FF;
+    box-shadow: 2px 2px 0 #070A12, 0 0 5px rgba(77, 160, 255, 0.2);
+  }
+  50% { 
+    border-color: #8FD4FF;
+    box-shadow: 2px 2px 0 #070A12, 0 0 10px rgba(143, 212, 255, 0.3);
+  }
+}
+
+/* Copyright */
+.pixel-copyright {
+  opacity: 0.7;
+  text-shadow: 1px 1px 0 #070A12;
+}
+
+/* Scanlines */
+.pixel-terminal::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.12) 50%);
+  background-size: 100% 3px;
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .pixel-terminal {
+    padding: 20px;
+    gap: 14px;
+  }
+
+  .pixel-content {
+    font-size: 13px;
+  }
+
+  .pixel-title {
+    font-size: 16px;
+  }
+
+  .pixel-bar {
+    height: 14px;
+  }
+
+  .pixel-percent {
+    font-size: 12px;
+  }
+
+  .pixel-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .pixel-skip-btn {
+    align-self: flex-start;
+  }
+}
