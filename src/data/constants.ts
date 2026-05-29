@@ -10,41 +10,44 @@ export const THEMES: Record<MoodType, ThemeColors> = {
 export const PROJECTS: Project[] = [
   { 
     id: '1', 
-    title: 'Retro Notes', 
-    description: 'A markdown note-taking app inspired by 90s OS aesthetics. Features local storage persistence, drag-and-drop organization, and custom themes.', 
-    tags: ['React', 'TS', 'Tailwind'],
+    title: 'DisPakistan', 
+    description: 'Production-grade digital invoicing platform for FBR & IRIS tax compliance. Features bulk Excel invoice submission with intelligent header detection, direct FBR API integration, multi-company support, sequential invoice numbering, printable tax invoices with QR codes, and interactive financial analytics.', 
+    tags: ['React', 'Node.js', 'MongoDB', 'Express', 'Tailwind'],
     link: '#',
     github: '#',
-    image: 'https://images.unsplash.com/photo-1517842645767-c639042777db?q=80&w=1000&auto=format&fit=crop',
+    image: '/images/dispakistan.png',
     gallery: [
-      'https://images.unsplash.com/photo-1555099962-4199c345e5dd?q=80&w=1000',
-      'https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1000'
+      '/images/dispakistan-1.png',
+      '/images/dispakistan-2.png'
+    ],
+    features: [
+      'Bulk Excel & IRIS template upload with smart header detection',
+      'Direct FBR API integration for real-time validation',
+      'Multi-company support with dynamic database switching',
+      'Printable sales tax invoices with QR codes',
+      'Interactive financial analytics with Recharts',
+      'OTP-based authentication with email verification'
     ]
   },
   { 
     id: '2', 
-    title: 'Zen Timer', 
-    description: 'Minimalist Pomodoro focus tool with ambient soundscapes. Includes customizable timer intervals and a distraction-free mode.', 
-    tags: ['Vue', 'Pinia', 'Audio API'],
+    title: 'TheOnline365', 
+    description: 'Full-stack multi-portal prep services platform for Amazon, eBay & Walmart sellers. Dual-portal architecture with order lifecycle management, real-time inventory tracking, automated billing with tiered pricing, role-based access control, and sales reporting. Deployed with Nginx, Redis, PM2 & CI/CD.', 
+    tags: ['MERN', 'Vite', 'Redis', 'Nginx', 'CI/CD'],
     link: '#',
     github: '#',
-    image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1000&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1000&auto=format&fit=crop',
     gallery: [
-      'https://images.unsplash.com/photo-1585435557343-3b092031a831?q=80&w=1000',
-      'https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?q=80&w=1000'
-    ]
-  },
-  { 
-    id: '3', 
-    title: 'Cloud Draw', 
-    description: 'Real-time collaborative whiteboard for remote teams. Supports infinite canvas, drawing tools, and image export.', 
-    tags: ['Next.js', 'Socket.io', 'Canvas'],
-    link: '#',
-    github: '#',
-    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1000&auto=format&fit=crop',
-    gallery: [
-      'https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=1000',
-      'https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1000'
+      'https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=1000',
+      'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1000'
+    ],
+    features: [
+      'Dual-portal architecture (Customer + Admin)',
+      'Inbound/Outbound/Return order lifecycle management',
+      'Real-time inventory tracking with shelf location editing',
+      'Automated billing engine with tiered FBM pricing',
+      'Role-based access control & team management',
+      'Deployed with Nginx, Redis, PM2 & GitHub Actions CI/CD'
     ]
   }
 ];

@@ -90,9 +90,9 @@ export const SkillsSection = ({ visible }) => {
               <div className="grid grid-cols-2 gap-4 md:gap-5">
                 {[
                   { name: 'Tailwind', desc: 'STYLING', icon: <Layout className="text-cyan-400" size={28} /> },
-                  { name: 'Figma', desc: 'DESIGN', icon: <Star className="text-orange-400" size={28} /> },
+                  { name: 'Express', desc: 'BACKEND', icon: <Star className="text-orange-400" size={28} /> },
                   { name: 'Git', desc: 'VERSION', icon: <GitBranch className="text-red-500" size={28} /> },
-                  { name: 'Docker', desc: 'CONTAINER', icon: <Box className="text-blue-500" size={28} /> }
+                  { name: 'Python', desc: 'LANGUAGE', icon: <Box className="text-yellow-500" size={28} /> }
                 ].map(skill => (
                   <div 
                     key={skill.name} 

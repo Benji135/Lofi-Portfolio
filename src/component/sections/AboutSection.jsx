@@ -5,18 +5,18 @@ import { Info, BookOpen, PenTool } from 'lucide-react';
 export const AboutSection = ({ visible }) => {
   const stack = [
     "React", "TypeScript", "Tailwind", "Node.js",
-    "Gemini", "Three.js", "Figma", "Git"
+    "Gemini", "Three.js", "Express", "Git"
   ];
 
   const journey = [
-    { year: '2026', title: 'BS Computer Science', place: 'University', desc: 'Expected Graduation' },
-    { year: '2022', title: 'Intermediate', place: 'College', desc: 'Pre-Engineering / CS' },
-    { year: '2020', title: 'Matriculation', place: 'High School', desc: 'Science Group' },
+    { year: '2026', title: 'BS Computer Science', place: 'National University of Modern Languages', desc: 'Expected Graduation' },
+    { year: '2022', title: 'Intermediate', place: 'F.C College Lahore', desc: 'ICS' },
+    { year: '2020', title: 'Matriculation', place: 'Unique Group of Institutions', desc: 'Science Group' },
   ];
 
   return (
     <section className="snap-section flex items-center justify-center p-4 md:p-6 relative overflow-hidden">
-      
+
       {/* Background Fidgets */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <div className="absolute top-16 left-10 text-[#8C7A6B] opacity-10 animate-float">
@@ -34,7 +34,7 @@ export const AboutSection = ({ visible }) => {
       </div>
 
       <div className="w-full max-w-4xl flex flex-col md:flex-row gap-6 relative z-10">
-        
+
         {/* Left Column: Tech Stack */}
         <div className="w-full md:w-1/3 flex flex-col gap-6">
           <Reveal visible={visible} type="pop">
@@ -71,7 +71,7 @@ export const AboutSection = ({ visible }) => {
         <div className="w-full md:w-2/3">
           <Reveal visible={visible} delay="delay-200" type="elastic">
             <div className="bg-white rounded-[2rem] shadow-soft border border-[#E6DCC3] overflow-hidden relative min-h-[400px]">
-              
+
               <div className="bg-[#F5F1E8] p-6 border-b border-[#E6DCC3] flex justify-between items-center">
                 <h3 className="font-pixel text-2xl text-gray-700">Academic_Log.txt</h3>
                 <Info size={20} className="text-gray-400" />

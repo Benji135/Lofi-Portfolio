@@ -120,17 +120,17 @@ export const ProjectModal = ({ project, isOpen, onClose }) => {
 
               <div className="prose prose-base text-gray-600 font-medium mb-10 leading-relaxed">
                 <p className="mb-4">{project.description}</p>
-                <p>
-                  Built with a focus on user experience and clean architecture.
-                  The interface mimics classic desktop environments while leveraging modern web technologies.
-                </p>
 
-                <h4 className="font-bold text-gray-800 mt-6 mb-2">Key Features:</h4>
-                <ul className="list-disc pl-5 space-y-1">
-                  <li>Responsive Design System</li>
-                  <li>Real-time Data Sync</li>
-                  <li>Custom Animation Library</li>
-                </ul>
+                {project.features && project.features.length > 0 && (
+                  <>
+                    <h4 className="font-bold text-gray-800 mt-6 mb-2">Key Features:</h4>
+                    <ul className="list-disc pl-5 space-y-1">
+                      {project.features.map((feat, i) => (
+                        <li key={i}>{feat}</li>
+                      ))}
+                    </ul>
+                  </>
+                )}
               </div>
 
               <div className="mt-auto flex flex-col gap-3">

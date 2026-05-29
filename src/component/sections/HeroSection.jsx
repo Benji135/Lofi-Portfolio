@@ -47,14 +47,14 @@ export const HeroSection = ({ visible, theme, mousePos, onScrollDown }) => {
 
         <div className="mb-6 md:mb-8 leading-tight select-none font-cloudy">
           <div className="text-4xl sm:text-6xl md:text-8xl font-black tracking-tight text-gray-800">
-            <StaggerText text="CREATIVE" visible={visible} />
+            <StaggerText text="MUHAMMAD" visible={visible} />
           </div>
 
           <div
             className="text-4xl sm:text-6xl md:text-8xl font-black tracking-tight mt-1 md:mt-[-0.2em]"
             style={{ color: theme.secondary }}
           >
-            <StaggerText text="DEVELOPER" visible={visible} />
+            <StaggerText text="SAMI" visible={visible} />
           </div>
         </div>
 

@@ -67,7 +67,7 @@ export const ContactSection = ({ visible, theme }) => {
                   </p>
 
                   <a
-                    href="mailto:hello@example.com"
+                    href="mailto:saisami902@gmail.com"
                     className="inline-flex items-center gap-2 px-8 py-4 bg-[#E07A5F] text-white font-bold font-mono rounded-lg shadow-md hover:bg-[#D0694E] hover:-translate-y-1 transition-all active:translate-y-0 text-sm md:text-base"
                   >
                     <Send size={18} /> SEND MESSAGE
@@ -78,10 +78,10 @@ export const ContactSection = ({ visible, theme }) => {
                 <div className="mt-8 pt-6 border-t border-gray-200 flex justify-between items-center relative z-20">
                   <span className="font-marker text-gray-400 text-sm">From: You</span>
                   <div className="flex gap-4">
-                    <a href="#" className="text-gray-400 hover:text-[#0077B5] transition-colors hover:scale-110 transform">
+                    <a href="https://www.linkedin.com/in/m-sami72/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#0077B5] transition-colors hover:scale-110 transform">
                       <Linkedin size={24} />
                     </a>
-                    <a href="#" className="text-gray-400 hover:text-black transition-colors hover:scale-110 transform">
+                    <a href="https://github.com/msami007" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-black transition-colors hover:scale-110 transform">
                       <Github size={24} />
                     </a>
                   </div>

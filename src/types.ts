@@ -16,6 +16,7 @@ export interface Project {
   github?: string;      // <-- added
   image: string;
   gallery?: string[];   // <-- added
+  features?: string[];  // <-- added
 }
 
 export interface Song {
