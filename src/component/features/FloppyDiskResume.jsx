@@ -10,9 +10,9 @@ export const FloppyDiskResume = ({ theme }) => {
 
     setTimeout(() => {
       const link = document.createElement('a');
-      link.href = '#'; // Replace with actual resume link
+      link.href = '/images/resume.pdf';
       link.download = 'resume.pdf';
-      // link.click(); // Uncomment when real link is ready
+      link.click();
       console.log("Download triggered");
 
       setStatus('done');

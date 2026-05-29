@@ -49,5 +49,26 @@ export const PROJECTS: Project[] = [
       'Role-based access control & team management',
       'Deployed with Nginx, Redis, PM2 & GitHub Actions CI/CD'
     ]
+  },
+  { 
+    id: '3', 
+    title: 'HearWise', 
+    description: 'Android hearing assistance app built with Flutter and a native C++ Oboe audio engine. Features real-time audio amplification with low-latency DSP processing, DTLN-based AI noise suppression, customizable EQ and tone controls, dynamic range compression, and live captioning powered by Vosk (offline) and Google Cloud Speech-to-Text.', 
+    tags: ['Flutter', 'C++', 'Oboe', 'Vosk', 'Firebase'],
+    link: '#',
+    github: '#',
+    image: 'https://images.unsplash.com/photo-1590658268037-6bf12f032f55?q=80&w=1000&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000',
+      'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?q=80&w=1000'
+    ],
+    features: [
+      'Native C++ Oboe audio engine for ultra-low latency',
+      'DTLN AI-powered real-time noise suppression',
+      'Customizable EQ, tone controls & dynamic range compression',
+      'Live captioning with Vosk (offline) & Google Cloud STT',
+      'FFI ring buffer piping processed audio to transcription',
+      'Sound Amplifier mode mirroring Android native functionality'
+    ]
   }
 ];
